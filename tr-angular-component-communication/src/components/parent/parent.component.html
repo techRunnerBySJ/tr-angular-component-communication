@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="name" placeholder="Enter your name">
+<p>Hello, {{ name }}!</p>
+<button (click)="sendMessage()">Send Message to Child</button>
+<app-child [childName]="name" (messageFromChild)="receiveMessage($event)"></app-child>
